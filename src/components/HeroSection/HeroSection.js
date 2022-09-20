@@ -24,6 +24,7 @@ const HeroSection = () => {
 
   const handleMint = async () => {
     await publicMint(mintAmount, account, Moralis);
+    console.log('minted')
   };
 
   return (
