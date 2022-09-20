@@ -5,9 +5,11 @@ import { BsTwitter } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { useMoralis } from "react-moralis";
 import { FaEthereum } from "react-icons/fa";
+import { ogMint } from '../../utils/beastLike';
+
 
 const HeroSectionFreemint = () => {
-  const { account, authenticate } = useMoralis();
+  const { account, authenticate, Moralis } = useMoralis();
   const text = "Minting Is Live!";
 
   const handleAuth = async () => {
@@ -22,7 +24,7 @@ const HeroSectionFreemint = () => {
   };
 
   const handleMint = async () => {
-    console.log("hi");
+    await ogMint(1, account, Moralis);
   };
 
   return (

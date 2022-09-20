@@ -13,6 +13,7 @@ const Header = () => {
   const navArray = [
     { navItem: "Home", to: "/" },
     { navItem: "Whitelist", to: "/whitelist" },
+    { navItem: "OGMINT", to: "/freemint"}
 
   ];
   return (
