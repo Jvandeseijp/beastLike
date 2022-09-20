@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import styles from "./HeroSection.module.css";
+import styles from "./HeroSectionWhitelist.module.css";
 import { SiDiscord } from "react-icons/si";
 import { BsTwitter } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { useMoralis } from "react-moralis";
 import { FaEthereum } from "react-icons/fa";
-import { publicMint } from '../../utils/beastLike';
+import { whitelistMint } from '../../utils/beastLike';
 
-const HeroSection = () => {
+const HeroSectionWhitelist = () => {
   const { account, authenticate, Moralis } = useMoralis();
   const text = "Minting Is Live!";
 
@@ -23,7 +23,7 @@ const HeroSection = () => {
   };
 
   const handleMint = async () => {
-    await publicMint(mintAmount, account, Moralis);
+    await whitelistMint(mintAmount, account, Moralis);
   };
 
   return (
@@ -59,7 +59,7 @@ const HeroSection = () => {
         </button>
         <input
           type={"number"}
-          max="20"
+          max="10"
           min="1"
           value={mintAmount}
           onChange={handleChange}
@@ -81,4 +81,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSectionWhitelist;

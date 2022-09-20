@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 
 import HeroSection from "./components/HeroSection/HeroSection";
+import HeroSectionFreemint from "./components/HeroSectionFreemint/HeroSectionFreemint";
+import HeroSectionWhitelist from "./components/HeroSectionWhitelist/HeroSectionWhitelist";
 
 function App() {
   return (
@@ -9,8 +11,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HeroSection />}></Route>{" "}
-        <Route path="/whitelist" element={<HeroSection />}></Route>{" "}
-        <Route path="/freemint" element={<HeroSection />}></Route>
+        <Route path="/whitelist" element={<HeroSectionWhitelist />}></Route>{" "}
+        <Route path="/freemint" element={<HeroSectionFreemint />}></Route>
       </Routes>
     </Router>
   );

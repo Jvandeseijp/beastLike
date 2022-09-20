@@ -14,19 +14,13 @@ const Header = () => {
     { navItem: "Home", to: "/" },
     { navItem: "Whitelist", to: "/whitelist" },
 
-    { navItem: "Freemint", to: "/freemint" },
   ];
   return (
     <div className={styles.navBar}>
       <div className={`${styles.header} ${sidebar && styles.sidebar}`}>
         <div className={styles.navItems}>
           {navArray.map((el, i) => (
-            <Link
-              to={el.to}
-              key={i}
-              className={styles.navLink}
-              onClick={() => setSidebar(false)}
-            >
+            <Link to={el.to} key={i} className={styles.navLink}>
               {el.navItem}
             </Link>
           ))}

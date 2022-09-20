@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import styles from "./HeroSection.module.css";
+import styles from "./HeroSectionFreemint.module.css";
 import { SiDiscord } from "react-icons/si";
 import { BsTwitter } from "react-icons/bs";
 import { RiInstagramFill } from "react-icons/ri";
 import { useMoralis } from "react-moralis";
 import { FaEthereum } from "react-icons/fa";
-import { publicMint } from '../../utils/beastLike';
 
-const HeroSection = () => {
-  const { account, authenticate, Moralis } = useMoralis();
+const HeroSectionFreemint = () => {
+  const { account, authenticate } = useMoralis();
   const text = "Minting Is Live!";
 
   const handleAuth = async () => {
@@ -23,7 +22,7 @@ const HeroSection = () => {
   };
 
   const handleMint = async () => {
-    await publicMint(mintAmount, account, Moralis);
+    console.log("hi");
   };
 
   return (
@@ -81,4 +80,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSectionFreemint;
