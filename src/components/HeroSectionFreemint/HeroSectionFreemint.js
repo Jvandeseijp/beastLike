@@ -16,13 +16,7 @@ const HeroSectionFreemint = () => {
     await authenticate({ signingMessage: "Welcome to the BeastLike Mint!" });
   };
 
-  const [mintAmount, setMintAmount] = useState(1);
-
-  const handleChange = (e) => {
-    console.log(e.target.value);
-    setMintAmount(e.target.value);
-  };
-
+ 
   const handleMint = async () => {
     await ogMint(1, account, Moralis);
   };
@@ -58,19 +52,7 @@ const HeroSectionFreemint = () => {
             {account ? "MINT" : "CONNECT WALLET"}
           </span>
         </button>
-        <input
-          type={"number"}
-          max="20"
-          min="1"
-          value={mintAmount}
-          onChange={handleChange}
-          style={{
-            width: "50px",
-            height: "30px",
-            marginTop: "10px",
-          }}
-        ></input>
-
+        
         <h2 style={{ color: "white" }}>
           {account
             ? account.substring(0, 5) + "..." + account.substring(38, 42)

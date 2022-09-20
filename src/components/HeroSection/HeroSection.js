@@ -9,7 +9,7 @@ import { publicMint } from '../../utils/beastLike';
 
 const HeroSection = () => {
   const { account, authenticate, Moralis } = useMoralis();
-  const text = "Minting Is Live!";
+  const text = "Minting on September 28th!";
 
   const handleAuth = async () => {
     await authenticate({ signingMessage: "Welcome to the BeastLike Mint!" });
@@ -46,6 +46,7 @@ const HeroSection = () => {
             </span>
           ))}
         </p>
+        {/*
         <button
           className={styles.mint}
           onClick={account ? handleMint : handleAuth}
@@ -76,6 +77,7 @@ const HeroSection = () => {
             ? account.substring(0, 5) + "..." + account.substring(38, 42)
             : ""}
         </h2>
+          */}
       </div>
       ;
     </div>

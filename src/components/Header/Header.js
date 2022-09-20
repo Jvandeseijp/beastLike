@@ -12,8 +12,8 @@ const Header = () => {
   const [sidebar, setSidebar] = useState(false);
   const navArray = [
     { navItem: "Home", to: "/" },
-    { navItem: "Whitelist", to: "/whitelist" },
-    { navItem: "OGMINT", to: "/freemint"}
+   // { navItem: "Whitelist", to: "/whitelist" },
+   // { navItem: "OGMINT", to: "/freemint"}
 
   ];
   return (
